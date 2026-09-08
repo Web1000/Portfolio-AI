@@ -1,0 +1,58 @@
+/* Targeted integration and responsive fixes for the original dark interface. */
+[hidden]{display:none!important}
+.research-mode{display:flex;align-items:center;gap:12px;border:1px solid #253d60;border-radius:8px;background:rgba(59,130,246,.07);padding:10px 14px;margin-bottom:22px;color:#94a3b8;font-size:12px}
+.research-mode strong{color:#93b8ff;white-space:nowrap}
+.research-status:not(:empty){padding:12px 15px;background:#14233b;border:1px solid #2b4261;border-radius:8px;margin-bottom:16px;color:#b9ccec}
+.research-status.is-error{background:#361e25;border-color:#793b47;color:#ffc5c5}
+.research-note{font-size:12px;color:#94a3b8;line-height:1.8;margin:12px 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.research-sources{padding-left:18px;font-size:12px;line-height:1.8;overflow-wrap:anywhere}
+.research-sources a,.chart-credit a{color:#8eb8ff}
+.report-download{margin-top:14px;padding:9px 14px;background:#142844;border:1px solid #2e4a72;color:#b6d0ff;border-radius:7px;cursor:pointer;font:inherit;font-size:12px}
+.report-download:hover{background:#203a60}
+.report-evidence{padding:20px}
+.chart-credit{font-size:10px;color:#8290a7;margin-top:12px}
+#chart-container{min-width:0}
+.ta-trace-step p,.bf-trace-step p,.explainer-step p{font-size:11px;color:#8c9db4;line-height:1.7}
+.ta-trace-step strong,.explainer-step strong{font-size:12px;font-weight:500}
+.ta-card,.ta-left,.ta-center,.ta-right,.main-panel,.bf-main,.bf-side{min-width:0}
+.bf-page .bf-app{grid-template-columns:248px minmax(0,1fr)}
+.bf-page .bf-workspace{overflow-x:visible;min-width:0}
+.bf-page .bf-grid{grid-template-columns:240px minmax(0,1fr) 245px}
+.bf-page .bf-side{display:flex;grid-column:auto}
+.bf-page .bf-profile{flex-shrink:0}
+.bf-page .bf-quote-copy{min-width:0}
+.bf-page .bf-hero-shot{min-height:172px;height:auto;gap:20px}
+.bf-page .bf-quote-copy h2{font-size:20px}
+.bf-page .bf-heading{min-width:0}
+.bf-page .bf-heading h1{font-size:24px}
+.bf-page .bf-heading p{font-size:12px}
+.bf-page .bf-menu{flex-shrink:0}
+.bf-page .bf-analysis-copy p{white-space:normal;overflow-wrap:anywhere}
+.bf-page .bf-row-detail{white-space:pre-wrap;overflow-wrap:anywhere}
+.bf-page .bf-analysis-row{cursor:default}
+.bf-page .bf-row-toggle{display:block;width:100%;border:0;padding:0;background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.bf-page .bf-analysis-row.open .bf-analysis-copy p{display:block;-webkit-line-clamp:unset}
+.bf-page .bf-lookup-card{height:auto;min-height:180px}
+.bf-page .bf-student-card{padding-bottom:18px}
+.bf-page .bf-score-ring{--score-fill:0%}
+.bf-page .bf-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}
+.bf-page .bf-date-pill{max-width:200px;white-space:normal}
+.bf-page .bf-decision-banner{grid-template-columns:30px minmax(0,1fr);gap:12px}
+.bf-page .bf-view-valuation{grid-column:2;justify-self:start}
+.bf-page .bf-analysis-row{grid-template-columns:40px minmax(0,1fr) 130px}
+.bf-page .bf-row-chevron{display:none}
+.bf-page .bf-signature{display:none}
+.bf-page .bf-topbar{height:auto;min-height:60px;margin-bottom:20px}
+input[readonly],textarea[readonly]{color:#9fb6d9}
+@media(max-width:1600px){.bf-page .bf-grid{grid-template-columns:240px minmax(0,1fr)}.bf-page .bf-side{grid-column:2;display:grid;grid-template-columns:1fr 1fr}.ta-layout{grid-template-columns:210px minmax(0,1fr)}.ta-right{grid-column:2}.bf-page .bf-top-actions{display:none}}
+@media(max-width:1100px){.bf-page .bf-app{grid-template-columns:1fr}.bf-page .bf-sidebar{display:block;position:static}.bf-page .bf-sidebar-footer,.bf-page .bf-brand{display:none}.bf-page .bf-nav{display:flex;flex-wrap:wrap;padding:0;gap:6px}.bf-page .bf-nav-link{padding:9px 12px;min-height:40px}.bf-page .bf-grid{grid-template-columns:220px minmax(0,1fr)}.bf-page .bf-side{grid-column:2}.bf-page .bf-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.bf-page .bf-hero-shot{flex-wrap:wrap}.bf-page .bf-quote-copy{flex:1}.bf-page .bf-sidebar{padding:12px 18px}.bf-page .bf-sidebar.is-hidden{display:none}.bf-page .bf-hero-action{margin-left:0}}
+@media(max-width:1024px){.app-body{flex-direction:column}.sidebar{display:flex;flex-wrap:wrap;width:auto;padding:12px;gap:5px;border-bottom:1px solid var(--border)}.sidebar-section-label{display:none}.sidebar-link{padding:8px 10px;margin:0}.ta-layout{grid-template-columns:200px minmax(0,1fr)}.ta-right{grid-column:2}.ta-center{order:initial}.ta-left{order:initial}.ta-right{order:initial}}
+@media(max-width:720px){.research-mode{align-items:flex-start;flex-direction:column;gap:3px}.ta-layout,.bf-page .bf-grid{grid-template-columns:1fr}.ta-right,.bf-page .bf-side{grid-column:auto}.bf-page .bf-side{grid-template-columns:1fr}.bf-page .bf-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.bf-page .bf-analysis-row{grid-template-columns:32px minmax(0,1fr)}.bf-page .bf-analysis-score{grid-column:2}.bf-page .bf-row-detail{grid-column:1/-1}.bf-page .bf-quote-copy h2{font-size:18px}.bf-page .bf-workspace{padding:16px 12px}.bf-page .bf-company-head{flex-wrap:wrap}.bf-page .bf-hero-shot{padding:20px;gap:16px}.bf-page .bf-profile{margin:0}.bf-page .bf-nav-link{font-size:12px}.bf-page .bf-metric strong{font-size:20px}.bf-page .bf-heading h1{font-size:21px}.bf-page .bf-quote-copy p{font-size:12px}.ta-left{display:grid;grid-template-columns:1fr}.bf-page .bf-modal{max-height:85vh;overflow:auto}.topnav-meta{font-size:10px}.bf-page .bf-decision-banner{display:block}.bf-page .bf-view-valuation{margin-top:12px}}
+.research-answer,#context-list{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;line-height:1.8}
+.bf-analysis-score progress{appearance:none;-webkit-appearance:none;width:100%;height:5px;border:0;border-radius:9px;overflow:hidden;background:#233044}
+.bf-analysis-score progress::-webkit-progress-bar{background:#233044}
+.bf-analysis-score progress::-webkit-progress-value{background:#67a875}
+.bf-analysis-score progress::-moz-progress-bar{background:#67a875}
+.bf-sidebar.is-hidden{display:none!important}
+.bf-page .bf-app:has(.bf-sidebar.is-hidden){grid-template-columns:1fr}
+.bf-page .bf-modal .bf-thinking-box p{margin:10px 0;line-height:1.8}

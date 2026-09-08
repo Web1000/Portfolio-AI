@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PortfolioAI - Buffett Agent</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ url_for('static', filename='restored.css') }}">
+</head>
+<body class="bf-page" data-mode="{{ 'demo' if demo else 'live' }}">
+  <div class="bf-app">
+    <aside class="bf-sidebar">
+      <a href="/" class="bf-brand">
+        <span class="bf-brand-mark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 12l8 10 8-10-8-10Z"/><path d="M12 2v20"/><path d="m4 12 8 4 8-4"/></svg>
+        </span>
+        <span>PortfolioAI</span>
+      </a>
+
+      <nav class="bf-nav">
+        <a href="/" class="bf-nav-link">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="/class2" class="bf-nav-link">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>Market Explainer</span>
+        </a>
+        <a href="/class3" class="bf-nav-link">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 9 11l4 4 8-8"/><path d="M14 7h7v7"/></svg>
+          <span>Technical Analyst</span>
+        </a>
+        <a href="/class4" class="bf-nav-link active">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+          <span>Warren Buffett Agent</span>
+        </a>
+      </nav>
+
+      <div class="bf-sidebar-footer">
+        <div class="bf-student-card">
+          <div class="bf-student-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
+          </div>
+          <div>
+            <strong>Built for students.</strong>
+            <p>Learn value investing the smart way.</p>
+          </div>
+          
+        </div>
+        <button class="bf-collapse" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          <span>Collapse</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="bf-workspace">
+      <header class="bf-topbar">
+        <button class="bf-menu" type="button" aria-label="Toggle navigation" aria-expanded="true">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+        </button>
+        <div class="bf-heading">
+          <h1>Warren Buffett Agent <span></span></h1>
+          <p>AI-powered value investing analysis inspired by Warren Buffett's investment principles.</p>
+        </div>
+        <div class="bf-top-actions">
+          <button type="button" class="bf-all-agents">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            All Agents
+          </button>
+          <button class="bf-icon-btn" type="button" aria-label="Notifications">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </button>
+          <div class="bf-user">PA</div>
+        </div>
+      </header>
+
+      {% include "mode-banner.html" %}
+      <section class="bf-hero-shot">
+        <div class="bf-profile">
+          <img src="{{ url_for('static', filename='buffett.jpg') }}" alt="Warren Buffett portrait">
+        </div>
+        <div class="bf-quote-copy">
+          <div class="bf-quote-mark">“</div>
+          <div>
+            <h2>Study the business before chasing the stock.</h2>
+            <p>A value-investing checklist inspired by Warren Buffett. Educational analysis; no affiliation or endorsement.</p>
+          </div>
+        </div>
+        <div class="bf-signature">Value investing</div>
+        <button class="bf-hero-action" type="button" id="buffett-hero-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"/></svg>
+          Analyze a Company
+        </button>
+      </section>
+
+      <section class="bf-grid">
+        <aside class="bf-left">
+          <div class="bf-card bf-lookup-card">
+            <h2>Company Lookup</h2>
+            <p>Enter a ticker to analyze</p>
+            <div class="bf-input-wrap">
+              <span class="bf-input-icon"><span aria-hidden="true">$</span>
+              </span>
+              <input type="text" id="buffett-ticker-input" value="{{ 'DEMO' if demo else 'AAPL' }}" aria-label="Company ticker" maxlength="40" {{ 'readonly' if demo else '' }} autocomplete="off" spellcheck="false">
+              {% if not demo %}<button type="button" class="bf-clear-btn" id="buffett-clear-btn" aria-label="Clear ticker">×</button>{% endif %}
+            </div>
+            <button id="buffett-analyze-btn" class="bf-analyze-btn" type="button">
+              <svg class="btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"/></svg>
+              <span class="btn-label">Analyze AAPL</span>
+            </button>
+          </div>
+
+          <div class="bf-card bf-score-card">
+            <div class="bf-card-title-row">
+              <h2>Overall Score</h2>
+              <span class="bf-info-dot" title="Educational rubric; see Methodology">i</span>
+            </div>
+            <div class="bf-score-ring">
+              <span id="buffett-score">--</span>
+              <small>/100</small>
+            </div>
+            <div class="bf-score-word" id="buffett-score-word">Waiting</div>
+          </div>
+
+          <div class="bf-card bf-trace-card">
+            <h2>Analysis Trace</h2>
+            <div class="bf-trace" id="buffett-trace">
+              <p class="research-note">Run an analysis to see completed workflow steps.</p>
+            </div>
+          </div>
+        </aside>
+
+        <section class="bf-main">
+          <div class="bf-card bf-report-card" id="buffett-report-card">
+            <div class="bf-empty">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <span>Enter a ticker to begin the business-owner analysis.</span>
+            </div>
+          </div>
+          <div class="bf-card report-evidence" id="evidence-card" hidden><h2>Sources &amp; limitations</h2><div id="value-limitations"></div><div id="sources"></div><div id="report-tools"></div></div>
+        </section>
+
+        <aside class="bf-side">
+          <div class="bf-card bf-breakdown-card">
+            <div class="bf-card-title-row">
+              <h2>Score Breakdown</h2>
+              <span class="bf-info-dot" title="Educational rubric; see Methodology">i</span>
+            </div>
+            <div class="bf-table-head"><span>Category</span><span>Score</span></div>
+            <div class="bf-score-table">
+              <div><span>Business Understanding</span><strong id="score-business">--/20</strong></div>
+              <div><span>Cash Flow Quality</span><strong id="score-cash">--/25</strong></div>
+              <div><span>Moat Strength</span><strong id="score-moat">--/25</strong></div>
+              <div><span>Debt Safety</span><strong id="score-debt">--/15</strong></div>
+              <div><span>Valuation Attractiveness</span><strong id="score-valuation">--/15</strong></div>
+            </div>
+            <div class="bf-total-line"><span>Total Score</span><strong><b id="side-total-score">--</b><small>/100</small></strong><em id="side-total-label">Waiting</em></div>
+          </div>
+
+          <div class="bf-card bf-about-card">
+            <h2>About This Analysis</h2><p>{{ 'Synthetic demo company and prepared narratives.' if demo else 'SEC annual financials and model-assisted research.' }}</p>
+            <p>This analysis is for educational purposes only and should not be considered investment advice.</p>
+            <button type="button">
+              Methodology
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            </button>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <script src="{{ url_for('static', filename='common.js') }}"></script>
+  <script src="{{ url_for('static', filename='class4.js') }}"></script>
+</body>
+</html>
