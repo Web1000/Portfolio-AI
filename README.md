@@ -141,11 +141,3 @@ The original interface has also been checked in a browser, including the chart, 
 See [methodology](docs/methodology.md) for formulas, score thresholds, and important data limitations. This project makes no claim of predictive accuracy, investment suitability, or backtested performance. It does not manage a real portfolio or execute trades.
 
 This showcase evolved from the supplied AI portfolio course exercises. See [project origins and changes](docs/project-notes.md) for what was retained and improved.
-
-## Put it on GitHub
-
-Use the **contents of this folder** as the repository root, so `README.md`, `app.py`, and `.github/` are at the top level. The earlier week folders, credentials, environments, and personal files are not needed. `.gitignore` excludes local keys and generated files; commit `.env.example` as the configuration template.
-
-Suggested repository name: `portfolio-ai`. Suggested description: “Traceable financial research workflows with Flask, LangGraph, deterministic analytics, and an offline demo.”
-
-Third-party chart and portrait attribution is documented in [third-party assets](docs/third-party-assets.md).
