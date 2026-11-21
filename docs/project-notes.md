@@ -1,8 +1,4 @@
-# Project origins and curation
-
-PortfolioAI grew from the AI portfolio course exercises included in the source workspace. The most complete implementation was under `Ai_portfolio_class-main/ai-portfolio-builder/class4/starter`; earlier folders held repeated starters, partial answers, and separate profile-classifier exercises.
-
-The final showcase retains the strongest common ideas: LangGraph workflows, deterministic technical indicators, SEC-based value analysis, topic routing, and visible execution traces. The original weekly folders are preserved outside this standalone project.
+# Implementation notes
 
 ## Changes in this edition
 
@@ -18,6 +14,6 @@ The final showcase retains the strongest common ideas: LangGraph workflows, dete
 - Omitted unvalidated portfolio-allocation, stop-loss, and take-profit generation. The demonstration focuses on research and explainable calculations.
 - Added regression tests, CI, configuration examples, documentation, and screenshots.
 
-Course materials are part of the project's origin; this is not represented as a wholly original implementation. No license file was present in the supplied source tree, so this curation does not assign a new license to inherited material.
+This project adapts existing starter code. The supplied source tree contained no license file. See [Third-party assets](third-party-assets.md) for asset credits.
 
 The earlier light-themed redesign was removed after review. Current README screenshots are captures of the restored interface with clearly labeled synthetic demo data.
