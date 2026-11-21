@@ -140,4 +140,4 @@ The original interface has also been checked in a browser, including the chart, 
 
 See [methodology](docs/methodology.md) for formulas, score thresholds, and important data limitations. This project makes no claim of predictive accuracy, investment suitability, or backtested performance. It does not manage a real portfolio or execute trades.
 
-This showcase evolved from the supplied AI portfolio course exercises. See [project origins and changes](docs/project-notes.md) for what was retained and improved.
+See the [implementation notes](docs/project-notes.md) for changes to valuation, signal calculations, and testing.
