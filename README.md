@@ -14,7 +14,7 @@ A financial research workspace built with **Python, Flask, LangGraph, and Claude
 | Technical analysis | Deterministic signal engine separated from language-model interpretation | Price chart, moving averages, RSI, returns, volatility, pivot levels, volume |
 | Market explainer | Conditional LangGraph routing and a two-pass explanation workflow | Plain-language answer with retrieved evidence and source links |
 
-The original dark dashboard, sidebar navigation, separate module screens, and Buffett report layout are retained. The technical chart includes interactive candlesticks, volume bars, MA20/MA50, and support/resistance overlays. Workflow traces, JSON downloads, responsive layouts, and clear missing-data messages connect those screens to the corrected backend. All page assets, including the chart library and portrait, are bundled locally; the demo makes no CDN or font requests.
+The value workflow aligns annual SEC filing periods before computing per-share estimates. When an input is missing, the report identifies the gap. The workflow trace and downloadable JSON let you inspect the figures behind each result. [Valuation methodology](docs/methodology.md)
 
 ## Run locally
 
